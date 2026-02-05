@@ -13,13 +13,13 @@ export default function About() {
 
   /* ---------------- TECH STACKS ---------------- */
   const techStacks = [
-    { name: "React", icon: "/portfolio_images/react.png" },
-    { name: "Next.js", icon: "/portfolio_images/next.png" },
-    { name: "Tailwind", icon: "/portfolio_images/tailwind.png" },
-    { name: "Node.js", icon: "/portfolio_images/node.png" },
-    { name: "Python", icon: "/portfolio_images/python.png" },
-    { name: "Flask", icon: "/portfolio_images/flask.png" },
-    { name: "MongoDB", icon: "/portfolio_images/mongodb.png" },
+    { name: "React", icon: "/images/logos/reactLogo.png" },
+    { name: "Next.js", icon: "/images/logos/nextjsLogo.png" },
+    { name: "Tailwind", icon: "/images/logos/tailwind.jpg" },
+    { name: "Node.js", icon: "/images/logos/node.png" },
+    { name: "Python", icon: "/images/logos/python.WEBP" },
+    { name: "Java", icon: "/images/logos/java.png" },
+    { name: "Expressjs", icon: "/images/logos/expressjs.png" },
     { name: "Firebase", icon: "/portfolio_images/firebase.png" },
   ];
 
@@ -108,11 +108,11 @@ export default function About() {
         </div>
       </Animate>
 
-      {/* ---------------- TECH STACK CAROUSEL ---------------- */}
-      <Animate delay={0.3}>
-        <h3 className="font-semibold mb-4 dark:text-white">⚙️ Tech Stack</h3>
+{/* ---------------- TECH STACK CAROUSEL ---------------- */}
+<Animate delay={0.3}>
+  <h3 className="font-semibold mb-4 dark:text-white">⚙️ Tech Stack</h3>
 
-        <div className="relative overflow-hidden mb-16">
+  <div className="relative overflow-hidden mb-16">
           <div
             className="flex gap-4 transition-transform duration-500"
             style={{ transform: `translateX(-${index * 110}px)` }}
