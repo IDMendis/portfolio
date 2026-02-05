@@ -42,22 +42,26 @@ export default function Hero() {
           <span className="text-pink-400 animate-pulse">_</span>
         </h1>
 
-        {/* Profile Image */}
-        <div className="flex justify-center mb-8">
-          <div className="relative">
-            <div className="w-28 h-28 md:w-36 md:h-36 rounded-full p-1 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 shadow-lg">
-              <Image
-                src="/me.jpg"
-                alt="Dinushi Mendis"
-                width={144}
-                height={144}
-                className="rounded-full object-cover"
-                priority
-              />
-            </div>
-            <div className="absolute inset-0 rounded-full border border-pink-400 opacity-30 animate-ping" />
-          </div>
-        </div>
+       {/* Profile Image */}
+<div className="flex justify-center mb-8">
+  <div className="relative">
+    {/* This is border container */}
+    <div className="w-28 h-28 md:w-36 md:h-36 rounded-full p-1 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 shadow-lg overflow-hidden">
+      {/* The inner wrapper for the image */}
+      <div className="relative w-full h-full rounded-full overflow-hidden bg-gray-200">
+        <Image
+          src="/images/me1.jpeg"
+          alt="Dinushi Mendis"
+          fill // This makes the image fill the parent div
+          className="object-cover" // This ensures the image covers the circle without stretching
+          priority
+        />
+      </div>
+    </div>
+    {/* Animated Ring */}
+    <div className="absolute inset-0 rounded-full border border-pink-400 opacity-30 animate-ping" />
+  </div>
+</div>
 
         <p className="text-gray-300 text-lg md:text-xl mb-8">
           Software Engineering Undergraduate actively seeking an internship
