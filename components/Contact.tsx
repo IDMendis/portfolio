@@ -179,7 +179,7 @@ const Contact = () => {
 
               <textarea
                 name="message"
-                rows="4"
+                rows={4}
                 placeholder="Your Message"
                 value={formData.message}
                 onChange={handleInputChange}
