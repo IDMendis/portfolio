@@ -15,7 +15,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #b6b3b3;
   }
 }
 
@@ -24,3 +24,47 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background 0.6s ease, color 0.4s ease;
+}
+
+/* DARK MODE */
+.dark body {
+  background:
+    radial-gradient(circle at 20% 10%, #1e293b 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, #312e81 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, #020617 0%, #020617 60%);
+  color: #e5e7eb;
+}
+/*light mode */
+body:not(.dark) {
+  background:
+    radial-gradient(circle at top, #f8fafc, #e2e8f0);
+  color: #020617;
+}
+body {
+  transition: background 0.6s ease, color 0.4s ease;
+}
+
+.dark body {
+  background:
+    radial-gradient(circle at top left, #0f172a, #020617),
+    linear-gradient(120deg, #020617, #020617);
+}
+
+
+/* subtle star noise (this is optional)*/
+.dark body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(#ffffff10 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
