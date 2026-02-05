@@ -50,7 +50,7 @@ export default function Hero() {
       {/* The inner wrapper for the image */}
       <div className="relative w-full h-full rounded-full overflow-hidden bg-gray-200">
         <Image
-          src="/images/me1.jpeg"
+          src="/images/me3.jpeg"
           alt="Dinushi Mendis"
           fill // This makes the image fill the parent div
           className="object-cover" // This ensures the image covers the circle without stretching

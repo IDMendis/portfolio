@@ -63,7 +63,7 @@ export default function About() {
           <div className="flex justify-center">
             <div className="w-56 h-56 rounded-2xl overflow-hidden border bg-white/40 dark:bg-black/40 backdrop-blur-lg">
               <img
-                src="/portfolio_images/my_profile.jpg"
+                src="/images/me1.jpeg"
                 alt="Dinushi"
                 className="w-full h-full object-cover"
               />
