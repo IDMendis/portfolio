@@ -5,32 +5,34 @@ import {
   ChevronLeft,
   ChevronRight,
   Award,
+  Code,
+  Server,
+  Database,
+  Cpu,
+  Globe,
+  Layers
 } from "lucide-react";
+
 import Animate from "./Animate";
 
 export default function About() {
   const [index, setIndex] = useState(0);
 
   /* ---------------- TECH STACKS ---------------- */
-  const techStacks = [
-    { name: "React", icon: "/images/logos/reactLogo.png" },
-    { name: "Next.js", icon: "/images/logos/nextjsLogo.png" },
-    { name: "Tailwind", icon: "/images/logos/tailwind.jpg" },
-    { name: "Node.js", icon: "/images/logos/node.png" },
-    { name: "Python", icon: "/images/logos/python.WEBP" },
-    { name: "Java", icon: "/images/logos/java.png" },
-    { name: "Expressjs", icon: "/images/logos/expressjs.png" },
-    { name: "Firebase", icon: "/portfolio_images/firebase.png" },
-  ];
+ const techStacks = [
+  { name: "React", icon: Code, color: "from-cyan-500 to-blue-600" },
+  { name: "Next.js", icon: Globe, color: "from-gray-700 to-black" },
+  { name: "Tailwind", icon: Layers, color: "from-cyan-400 to-blue-500" },
+  { name: "Node.js", icon: Server, color: "from-green-500 to-emerald-600" },
+  { name: "Python", icon: Cpu, color: "from-yellow-400 to-green-500" },
+  { name: "Java", icon: Cpu, color: "from-red-500 to-orange-600" },
+  { name: "Express.js", icon: Server, color: "from-gray-600 to-gray-800" },
+  { name: "Firebase", icon: Database, color: "from-yellow-500 to-orange-500" },
+];
 
-  useEffect(() => {
-    const timer = setInterval(
-      () => setIndex((prev) => (prev + 1) % techStacks.length),
-      2000
-    );
-    return () => clearInterval(timer);
-  }, [techStacks.length]);
+const infiniteStacks = [...techStacks, ...techStacks];
 
+ 
   /* ---------------- CERTIFICATIONS ---------------- */
   const certifications = [
     {
@@ -114,48 +116,34 @@ export default function About() {
       </Animate>
 
 {/* ---------------- TECH STACK CAROUSEL ---------------- */}
+{/* ---------------- TECH STACK CAROUSEL ---------------- */}
 <Animate delay={0.3}>
-  <h3 className="font-semibold mb-4 dark:text-white">⚙️ Tech Stack</h3>
+  <h3 className="font-semibold mb-6 dark:text-white">
+    ⚙️ Tech Stack
+  </h3>
 
   <div className="relative overflow-hidden mb-16">
+    <div className="flex animate-scroll gap-6 w-max hover:[animation-play-state:paused]">
+      {infiniteStacks.map((tech, i) => (
+        <div
+          key={i}
+          className="group min-w-[130px] h-32 flex flex-col items-center justify-center rounded-xl border border-white/10 bg-white/5 dark:bg-black/40 backdrop-blur-lg hover:border-pink-400/50 hover:scale-105 transition-all duration-300"
+        >
           <div
-            className="flex gap-4 transition-transform duration-500"
-            style={{ transform: `translateX(-${index * 110}px)` }}
+            className={`w-14 h-14 rounded-full bg-gradient-to-r ${tech.color} flex items-center justify-center mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300`}
           >
-            {techStacks.map((tech, i) => (
-              <div
-                key={i}
-                className="min-w-[90px] h-24 flex flex-col items-center justify-center rounded-xl border bg-white/50 dark:bg-black/40 backdrop-blur-lg"
-              >
-                <img
-                  src={tech.icon}
-                  alt={tech.name}
-                  className="w-8 h-8 mb-2"
-                />
-                <span className="text-xs">{tech.name}</span>
-              </div>
-            ))}
+            <tech.icon className="w-7 h-7 text-white" />
           </div>
 
-          {/* Controls */}
-          <div className="flex gap-3 mt-4">
-            <button
-              onClick={() =>
-                setIndex((index - 1 + techStacks.length) % techStacks.length)
-              }
-              className="p-2 rounded-full border"
-            >
-              <ChevronLeft size={16} />
-            </button>
-            <button
-              onClick={() => setIndex((index + 1) % techStacks.length)}
-              className="p-2 rounded-full border"
-            >
-              <ChevronRight size={16} />
-            </button>
-          </div>
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-pink-400 transition-colors duration-300">
+            {tech.name}
+          </span>
         </div>
-      </Animate>
+      ))}
+    </div>
+  </div>
+</Animate>
+
 
       {/* ---------------- CERTIFICATIONS ---------------- */}
       <Animate delay={0.4}>
