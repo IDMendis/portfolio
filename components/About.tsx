@@ -116,28 +116,31 @@ const infiniteStacks = [...techStacks, ...techStacks];
       </Animate>
 
 {/* ---------------- TECH STACK CAROUSEL ---------------- */}
-{/* ---------------- TECH STACK CAROUSEL ---------------- */}
 <Animate delay={0.3}>
   <h3 className="font-semibold mb-6 dark:text-white">
     ⚙️ Tech Stack
   </h3>
 
   <div className="relative overflow-hidden mb-16">
-    <div className="flex animate-scroll gap-6 w-max hover:[animation-play-state:paused]">
-      {infiniteStacks.map((tech, i) => (
+    <div className="flex gap-6 w-max animate-scroll hover:[animation-play-state:paused]">
+      {infiniteStacks.map((tech, idx) => (
         <div
-          key={i}
-          className="group min-w-[130px] h-32 flex flex-col items-center justify-center rounded-xl border border-white/10 bg-white/5 dark:bg-black/40 backdrop-blur-lg hover:border-pink-400/50 hover:scale-105 transition-all duration-300"
+          key={idx}
+          className="relative group min-w-[130px] h-32 flex flex-col items-center justify-center rounded-xl p-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 animate-borderGlow hover:shadow-[0_0_20px_rgba(236,72,153,0.6)] transition-all duration-500"
         >
-          <div
-            className={`w-14 h-14 rounded-full bg-gradient-to-r ${tech.color} flex items-center justify-center mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300`}
-          >
-            <tech.icon className="w-7 h-7 text-white" />
-          </div>
+          <div className="flex flex-col items-center justify-center w-full h-full rounded-xl bg-white/5 dark:bg-black/50 backdrop-blur-lg animate-float">
 
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-pink-400 transition-colors duration-300">
-            {tech.name}
-          </span>
+            <div
+              className={`w-14 h-14 rounded-full bg-gradient-to-r ${tech.color} flex items-center justify-center mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+            >
+              <tech.icon className="w-7 h-7 text-white" />
+            </div>
+
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-pink-400 transition-colors duration-300">
+              {tech.name}
+            </span>
+
+          </div>
         </div>
       ))}
     </div>

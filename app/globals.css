@@ -79,4 +79,38 @@ body {
 .animate-scroll {
   animation: scroll 20s linear infinite;
 }
+/* Border Gradient Animation */
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-borderGlow {
+  background-size: 300% 300%;
+  animation: borderGlow 6s ease infinite;
+}
+
+/* Floating Effect */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
 
