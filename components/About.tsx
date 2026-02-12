@@ -89,17 +89,22 @@ export default function About() {
         <div className="grid sm:grid-cols-2 gap-6 mb-16">
           <div className="p-6 rounded-xl bg-white/50 dark:bg-black/40 backdrop-blur-lg border">
             <h3 className="font-semibold mb-2 flex items-center gap-2 dark:text-white">
-              🎓 Education
+              🎓 Higher Education
             </h3>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 dark:text-white">
+                University of Moratuwa
+            </h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">
               BSc (Hons) in Information Technology<br />
-              University of Moratuwa<br />
               GPA: 3.49 (2023 – 2027)
             </p>
-          </div>
+          </div> 
 
           <div className="p-6 rounded-xl bg-white/50 dark:bg-black/40 backdrop-blur-lg border">
-            <h3 className="font-semibold mb-2 dark:text-white">🧪 A/L Stream</h3>
+            <h3 className="font-semibold mb-2 dark:text-white">🧪 Secondary Education</h3>
+            <h4 className="font-semibold mb-2 flex items-center gap-2 dark:text-white">
+                  Govt/ Science Cillege- Matale
+            </h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">
               Biological Science<br />
               Biology (B), Physics (B), Chemistry (A)
