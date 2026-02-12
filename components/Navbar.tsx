@@ -3,9 +3,8 @@ import ThemeToggle from "./ThemeToggle";
 export default function Navbar() {
   return (
  <nav className="
-  fixed top-4 left-1/2 -translate-x-1/2
-  w-[90%] max-w-6xl
-  rounded-2xl
+  fixed top-4 w-full left-0
+
   bg-white/70 dark:bg-black/40
   backdrop-blur-xl
   border border-white/20 dark:border-white/10
