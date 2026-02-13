@@ -41,9 +41,10 @@ export default function Projects() {
         transition={{ duration: 0.9, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold text-center mb-20 tracking-tight">
-          My Projects
-        </h2>
+        <h1 className="text-4xl font-bold text-center mb-20 tracking-tight text-[var(--foreground)]">
+  My Projects
+</h1>
+
       </motion.div>
 
       <div className="space-y-28">
