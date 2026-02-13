@@ -1,8 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
+import { useEffect, useState } from "react";
+
+/* ------------------ PROJECT DATA ------------------ */
 
 const projects = [
   {
@@ -11,7 +14,11 @@ const projects = [
     tech: ["MERN", "FastAPI", "Machine Learning", "MongoDB"],
     description:
       "Semi-intelligent healthcare platform with ML-powered specialist recommendations and secure real-time appointment booking.",
-    image: "/projects/carely.png",
+    images: [
+      "/projects/carely-1.png",
+      "/projects/carely-2.png",
+      "/projects/carely-3.png",
+    ],
     github: "#",
     live: "#",
   },
@@ -20,8 +27,26 @@ const projects = [
     period: "2025 (Group Project – TayCanTech Pvt Ltd)",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
     description:
-      "Role-based garage system with secure authentication, service management and customer feedback modules.",
-    image: "/projects/garage.png",
+      "Developed a full-stack garage management system with role-based access for customers, technicians, and managers. Implemented secure JWT authentication and built modular service and feedback management features. Collaborated in an agile team environment to deliver a scalable and user-focused solution for real-world operational workflows.",
+    images: [
+      "/projectImages/garage1.jpg",
+      "/projectImages/garage2.jpg",
+      "/projectImages/garage3.jpg",
+      "/projectImages/garage4.jpg",
+    ],
+    github: "#",
+    live: "#",
+  },
+  {
+    title: "StockCast – Distributed Real-Time Broadcasting System",
+    period: "Network ",
+    tech: ["Next.js", "FastAPI", "Solidity", "Polygon"],
+    description:
+      "Engineered a high-performance, non-blocking distributed broadcasting system using Spring Boot and Java NIO. Designed a publish-subscribe architecture supporting TCP, UDP, and WebSocket protocols to enable efficient real-time data distribution. Optimized for low latency and concurrent client handling across multiple communication channels.",
+    images: [
+      "/projects/stockcast1.jpg",
+      "/projects/stockcast2.jpg",
+    ],
     github: "#",
     live: "#",
   },
@@ -31,11 +56,86 @@ const projects = [
     tech: ["Next.js", "FastAPI", "Solidity", "Polygon"],
     description:
       "Decentralized esports tournament platform integrating blockchain for transparency and smart contracts.",
-    image: "/projects/aegis.png",
+    images: [
+      "/projects/aegis-1.png",
+      "/projects/aegis-2.png",
+    ],
+    github: "#",
+    live: "#",
+  },
+  {
+    title: "Project Aegis – Blockchain Esports Platform",
+    period: "2025 (Hackelite – IEEE UoM)",
+    tech: ["Next.js", "FastAPI", "Solidity", "Polygon"],
+    description:
+      "Decentralized esports tournament platform integrating blockchain for transparency and smart contracts.",
+    images: [
+      "/projects/aegis-1.png",
+      "/projects/aegis-2.png",
+    ],
     github: "#",
     live: "#",
   },
 ];
+
+/* ------------------ IMAGE SLIDER ------------------ */
+
+function ProjectSlider({ images }: { images: string[] }) {
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [paused, images.length]);
+
+  return (
+    <div
+      className="relative w-full h-[350px] overflow-hidden rounded-2xl"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={images[index]}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6 }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={images[index]}
+            alt="Project image"
+            fill
+            className="object-cover"
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Dots */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+        {images.map((_, i) => (
+          <div
+            key={i}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              i === index
+                ? "w-5 bg-white"
+                : "w-2 bg-white/50"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ------------------ MAIN COMPONENT ------------------ */
 
 export default function Projects() {
   return (
@@ -81,36 +181,24 @@ export default function Projects() {
               blur-2xl transition duration-700 -z-10"
             />
 
-            {/* IMAGE */}
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-              className="md:w-1/2 overflow-hidden rounded-2xl"
-            >
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={700}
-                height={450}
-                className="object-cover w-full h-full transition duration-700 group-hover:scale-110"
-              />
-            </motion.div>
+            {/* IMAGE SLIDER */}
+            <div className="md:w-1/2">
+              <ProjectSlider images={project.images} />
+            </div>
 
             {/* CONTENT */}
             <div className="md:w-1/2 flex flex-col justify-center">
 
-              {/* Title */}
               <h3 className="text-2xl md:text-3xl font-semibold 
                 text-gray-900 dark:text-white tracking-tight">
                 {project.title}
               </h3>
 
-              {/* Period */}
-              <p className="text-sm mt-2 
-                text-gray-500 dark:text-gray-400">
+              <p className="text-sm mt-2 text-gray-500 dark:text-gray-400">
                 {project.period}
               </p>
 
-              {/* Tech Stack Badges */}
+              {/* Tech badges */}
               <div className="flex flex-wrap gap-2 mt-4">
                 {project.tech.map((item) => (
                   <span
@@ -125,10 +213,7 @@ export default function Projects() {
                 ))}
               </div>
 
-              {/* Description */}
-              <p className="mt-5 
-                text-gray-700 dark:text-gray-300 
-                leading-relaxed">
+              <p className="mt-5 text-gray-700 dark:text-gray-300 leading-relaxed">
                 {project.description}
               </p>
 
