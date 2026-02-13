@@ -39,13 +39,15 @@ const certifications = [
     title: "Authentication and Authorization in Web & API Security",
     org: "Linux Foundation",
     year: "2025",
-    link: ""
+    link: "",
+    image: "/certificates/linux-auth.png"
   },
   {
     title: "Introduction to Cybersecurity",
     org: "Cisco Networking Academy",
     year: "2025",
-    link: ""
+    link: "",
+    image: "/images/cs1.jpg"
   },
   {
     title: "Blockchain: Understanding Its Uses and Implications",
@@ -63,7 +65,7 @@ const certifications = [
     title: "Programming Foundations: Software Testing / QA",
     org: "LinkedIn Learning",
     year: "2025",
-    link: ""
+    link: "https://www.linkedin.com/learning/certificates/0032352972e4be1a12f75d4ce1a013a5208586bd628a69d0bd6f11005ca7253d"
   }
 ];
 

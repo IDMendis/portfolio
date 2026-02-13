@@ -85,7 +85,7 @@ export default function Hero() {
         {/* Social Media Icons */}
 <div className="mt-8 flex justify-center gap-6">
   <a
-    href="https://www.linkedin.com/in/YOUR_LINKEDIN"
+    href="https://www.linkedin.com/in/ivonmendis"
     target="_blank"
     rel="noopener noreferrer"
     className="text-gray-300 hover:text-[#0A66C2] transition transform hover:scale-125 hover:drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]"
@@ -104,7 +104,7 @@ export default function Hero() {
   </a>
 
   <a
-    href="https://www.facebook.com/YOUR_FACEBOOK"
+    href="https://web.facebook.com/dinushi.mendis.31"
     target="_blank"
     rel="noopener noreferrer"
     className="text-gray-300 hover:text-[#1877F2] transition transform hover:scale-125 hover:drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]"
