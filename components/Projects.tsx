@@ -76,6 +76,18 @@ const projects = [
     github: "#",
     live: "#",
   },
+  {
+    title: "Tic-Tac-Toe Gamebox",
+    period: "2024 | Microcontroller-Based Hardware Project",
+    tech: ["Arduino", "C++", "ESP432", "RFID", "LED Neon Lights"],
+    description:
+      "Designed and developed an interactive microcontroller-based game system inspired by the classic SOS gameplay concept. Implemented embedded logic and hardware integration to create a responsive and engaging physical gaming experience.",
+    images: [
+      "/projectImages/tictac.jpg",
+    ],
+    github: "#",
+    live: "#",
+  },
 ];
 
 /* ------------------ IMAGE SLIDER ------------------ */
