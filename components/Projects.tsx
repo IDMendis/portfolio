@@ -39,16 +39,16 @@ const projects = [
   },
   {
     title: "StockCast – Distributed Real-Time Broadcasting System",
-    period: "Network ",
-    tech: ["Next.js", "FastAPI", "Solidity", "Polygon"],
+    period: "Network Programming/ Fullstack Development ",
+    tech: ["Java", "Spring Boot", "Java NIO", "TCP", "UDP", "WebSocket"],
     description:
       "Engineered a high-performance, non-blocking distributed broadcasting system using Spring Boot and Java NIO. Designed a publish-subscribe architecture supporting TCP, UDP, and WebSocket protocols to enable efficient real-time data distribution. Optimized for low latency and concurrent client handling across multiple communication channels.",
     images: [
-      "/projects/stockcast1.jpg",
-      "/projects/stockcast2.jpg",
+      "/projectImages/stockcast.jpg",
+      "/projectImages/stockcast2.jpg",
     ],
     github: "#",
-    live: "#",
+  
   },
   {
     title: "Project Aegis – Blockchain Esports Platform",
@@ -64,11 +64,11 @@ const projects = [
     live: "#",
   },
   {
-    title: "Project Aegis – Blockchain Esports Platform",
+    title: "Weather App with Real-Time Data and Forecasting",
     period: "2025 (Hackelite – IEEE UoM)",
     tech: ["Next.js", "FastAPI", "Solidity", "Polygon"],
     description:
-      "Decentralized esports tournament platform integrating blockchain for transparency and smart contracts.",
+      "Built a cross-platform mobile application using Flutter that fetches and displays real-time weather data via the OpenWeatherMap API. Focused on clean UI design, responsive layouts, and efficient API integration to deliver accurate and user-friendly weather insights.",
     images: [
       "/projects/aegis-1.png",
       "/projects/aegis-2.png",
