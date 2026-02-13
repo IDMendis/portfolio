@@ -65,13 +65,13 @@ const projects = [
   },
   {
     title: "Weather App with Real-Time Data and Forecasting",
-    period: "2025 (Hackelite – IEEE UoM)",
-    tech: ["Next.js", "FastAPI", "Solidity", "Polygon"],
+    period: "2025 (Personal Project)",
+    tech: ["Flutter", "Dart", "OpenWeatherMap API"],
     description:
       "Built a cross-platform mobile application using Flutter that fetches and displays real-time weather data via the OpenWeatherMap API. Focused on clean UI design, responsive layouts, and efficient API integration to deliver accurate and user-friendly weather insights.",
     images: [
-      "/projects/aegis-1.png",
-      "/projects/aegis-2.png",
+      "/projectImages/weatherApp.jpg",
+      "/projectImages/weatherApp2.jpg",
     ],
     github: "#",
     live: "#",
