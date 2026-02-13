@@ -34,20 +34,40 @@ const infiniteStacks = [...techStacks, ...techStacks];
 
  
   /* ---------------- CERTIFICATIONS ---------------- */
-  const certifications = [
-    {
-      title: "Python for Beginners",
-      org: "Coursera",
-    },
-    {
-      title: "Frontend Development with React",
-      org: "Meta",
-    },
-    {
-      title: "UI/UX Design Fundamentals",
-      org: "Google",
-    },
-  ];
+const certifications = [
+  {
+    title: "Authentication and Authorization in Web & API Security",
+    org: "Linux Foundation",
+    year: "2025",
+    link: ""
+  },
+  {
+    title: "Introduction to Cybersecurity",
+    org: "Cisco Networking Academy",
+    year: "2025",
+    link: ""
+  },
+  {
+    title: "Blockchain: Understanding Its Uses and Implications",
+    org: "Linux Foundation",
+    year: "2025",
+    link: ""
+  },
+  {
+    title: "Complete Guide to Cybersecurity: A Practical Approach",
+    org: "LinkedIn Learning",
+    year: "2025",
+    link: ""
+  },
+  {
+    title: "Programming Foundations: Software Testing / QA",
+    org: "LinkedIn Learning",
+    year: "2025",
+    link: ""
+  }
+];
+
+
 
   return (
     <section id="about" className="max-w-6xl mx-auto px-6 py-24">
@@ -149,23 +169,39 @@ const infiniteStacks = [...techStacks, ...techStacks];
 
 
       {/* ---------------- CERTIFICATIONS ---------------- */}
-      <Animate delay={0.4}>
-        <h3 className="font-semibold mb-4 flex items-center gap-2 dark:text-white">
-          <Award size={18} /> Certifications
-        </h3>
+<Animate delay={0.4}>
+  <h3 className="font-semibold mb-4 flex items-center gap-2 dark:text-white">
+    <Award size={18} /> Certifications
+  </h3>
 
-        <div className="grid sm:grid-cols-3 gap-6">
-          {certifications.map((cert, i) => (
-            <div
-              key={i}
-              className="p-5 rounded-xl border bg-white/50 dark:bg-black/40 backdrop-blur-lg"
-            >
-              <p className="font-medium text-sm">{cert.title}</p>
-              <p className="text-xs text-gray-500">{cert.org}</p>
-            </div>
-          ))}
-        </div>
-      </Animate>
+  <div className="grid sm:grid-cols-3 gap-6">
+    {certifications.map((cert, i) => (
+      <div
+        key={i}
+        className="p-5 rounded-xl border bg-white/50 dark:bg-black/40 backdrop-blur-lg hover:shadow-lg transition duration-300"
+      >
+        <p className="font-semibold text-sm dark:text-white">
+          {cert.title}
+        </p>
+
+        <p className="text-xs text-gray-500 mt-1">
+          {cert.org} • {cert.year}
+        </p>
+
+        {cert.link && (
+          <a
+            href={cert.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-blue-500 hover:underline mt-3 inline-block"
+          >
+            View Credential
+          </a>
+        )}
+      </div>
+    ))}
+  </div>
+</Animate>
     </section>
   );
 }

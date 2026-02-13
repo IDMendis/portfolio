@@ -57,8 +57,8 @@ const projects = [
     description:
       "Contributed to the development of a decentralized esports tournament platform integrating blockchain for transparency and smart contract-based prize distribution. Built frontend interfaces with Next.js and backend APIs using FastAPI, while leveraging Solidity and Polygon for secure on-chain logic.",
     images: [
-      "/projects/aegis-1.png",
-      "/projects/aegis-2.png",
+      "/projectImages/aegis1.png",
+      "/projectImages/aegis2.png",
     ],
     github: "#",
     live: "#",

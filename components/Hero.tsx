@@ -65,7 +65,7 @@ export default function Hero() {
 </div>
 
         <p className="text-gray-300 text-lg md:text-xl mb-8">
-          Software Engineering Undergraduate actively seeking an internship
+          Welcome to my portfolio! I'm exploring software engineering and cybersecurity to create reliable digital solutions. Explore my work and let’s connect!
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
