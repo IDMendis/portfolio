@@ -55,7 +55,7 @@ const projects = [
     period: "2025 (Hackelite – IEEE UoM)",
     tech: ["Next.js", "FastAPI", "Solidity", "Polygon"],
     description:
-      "Decentralized esports tournament platform integrating blockchain for transparency and smart contracts.",
+      "Contributed to the development of a decentralized esports tournament platform integrating blockchain for transparency and smart contract-based prize distribution. Built frontend interfaces with Next.js and backend APIs using FastAPI, while leveraging Solidity and Polygon for secure on-chain logic.",
     images: [
       "/projects/aegis-1.png",
       "/projects/aegis-2.png",
@@ -242,7 +242,7 @@ export default function Projects() {
                   View Code
                 </a>
 
-                <a
+                {/* <a
                   href={project.live}
                   className="flex items-center gap-2 px-4 py-2 text-sm rounded-xl
                     border border-gray-300 dark:border-white/20
@@ -252,7 +252,7 @@ export default function Projects() {
                 >
                   <ExternalLink size={16} />
                   Live Demo
-                </a>
+                </a> */}
               </div>
 
             </div>
