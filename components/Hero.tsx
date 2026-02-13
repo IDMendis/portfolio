@@ -17,11 +17,12 @@ import {
 
 export default function Hero() {
   const text = useTypewriter([
-    "Dinushi Mendis",
-    "a Software Engineer",
-    "a Full-Stack Developer",
-    "a Problem Solver",
-    "a Tech Enthusiast",
+    "Hi, I’m Dinushi Mendis",
+    "I’m a Software Engineer",
+    "I’m a Full-Stack Developer",
+    "I’m a Problem Solver",
+    "I’m a Tech Enthusiast",
+    "Passionate About Cybersecurity",
   ]);
 
   return (
@@ -35,7 +36,7 @@ export default function Hero() {
         className="relative z-10 text-center max-w-3xl"
       >
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6">
-          Hi, I’m{" "}
+          {" "}
           <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
             {text}
           </span>
