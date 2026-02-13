@@ -94,7 +94,7 @@ export default function Hero() {
   </a>
 
   <a
-    href="https://github.com/YOUR_GITHUB"
+    href="https://github.com/IDMendis"
     target="_blank"
     rel="noopener noreferrer"
     className="text-gray-300 hover:text-white transition transform hover:scale-125 hover:drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]
@@ -112,14 +112,14 @@ export default function Hero() {
     <FaFacebook size={28} />
   </a>
 
-  <a
+  {/* <a
     href="https://t.me/YOUR_TELEGRAM"
     target="_blank"
     rel="noopener noreferrer"
     className="text-gray-300 hover:text-[#229ED9] transition transform hover:scale-125 hover:drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]"
   >
     <FaTelegram size={28} />
-  </a>
+  </a> */}
 
   <a
     href="https://www.credly.com/users/YOUR_CREDLY"
