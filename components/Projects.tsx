@@ -82,7 +82,7 @@ const projects = [
   tech: ["Arduino", "C++", "ESP32", "RFID", "LED Neon Lights", "Firebase"],
   description:
     "Designed and developed an interactive microcontroller-based game system inspired by the classic SOS gameplay concept. Implemented embedded logic and hardware integration to create a responsive and engaging physical gaming experience.",
-  images: ["/projectImages/tictac.jpg"],
+  images: ["/projectImages/tictac.jpg", "/projectImages/tictac2.jpg"],
   github: "",
   live: "https://www.youtube.com/watch?v=HzNSNgRtWnQ",
 },

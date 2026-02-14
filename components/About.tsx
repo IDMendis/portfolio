@@ -1,71 +1,119 @@
 "use client";
 import { useEffect, useState } from "react";
 import {
-  GraduationCap,
-  ChevronLeft,
-  ChevronRight,
-  Award,
-  Code,
-  Server,
-  Database,
-  Cpu,
-  Globe,
-  Layers
-} from "lucide-react";
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiFirebase,
+  SiMysql,
+  SiPostgresql,
+  SiFlutter,
+  SiDocker,
+  SiGithub,
+  SiJavascript,
+  SiTypescript
+} from "react-icons/si";
+
+import { FaJava, FaPython } from "react-icons/fa";
+
 
 import Animate from "./Animate";
+
+ import { ShieldCheck, BookOpen, Lock, Cpu, Award } from "lucide-react";
 
 export default function About() {
   const [index, setIndex] = useState(0);
 
   /* ---------------- TECH STACKS ---------------- */
- const techStacks = [
-  { name: "React", icon: Code, color: "from-cyan-500 to-blue-600" },
-  { name: "Next.js", icon: Globe, color: "from-gray-700 to-black" },
-  { name: "Tailwind", icon: Layers, color: "from-cyan-400 to-blue-500" },
-  { name: "Node.js", icon: Server, color: "from-green-500 to-emerald-600" },
-  { name: "Python", icon: Cpu, color: "from-yellow-400 to-green-500" },
-  { name: "Java", icon: Cpu, color: "from-red-500 to-orange-600" },
-  { name: "Express.js", icon: Server, color: "from-gray-600 to-gray-800" },
-  { name: "Firebase", icon: Database, color: "from-yellow-500 to-orange-500" },
+/* ---------------- TECH STACK DATA ---------------- */
+
+const techStacks = [
+  { name: "React", icon: SiReact },
+  { name: "Next.js", icon: SiNextdotjs },
+  { name: "Tailwind CSS", icon: SiTailwindcss },
+  { name: "Node.js", icon: SiNodedotjs },
+  { name: "Express.js", icon: SiExpress },
+  { name: "MongoDB", icon: SiMongodb },
+  { name: "Firebase", icon: SiFirebase },
+  { name: "Java", icon: FaJava },
+  { name: "Python", icon: FaPython },
+  { name: "MySQL", icon: SiMysql },
+  { name: "PostgreSQL", icon: SiPostgresql },
+  { name: "Docker", icon: SiDocker },
+  { name: "GitHub", icon: SiGithub },
 ];
+
+const categorizedStacks = {
+  "🌐 Web Development": [
+    { name: "React", icon: SiReact },
+    { name: "Next.js", icon: SiNextdotjs },
+    { name: "Tailwind CSS", icon: SiTailwindcss },
+    { name: "JavaScript", icon: SiJavascript },
+    { name: "TypeScript", icon: SiTypescript },
+  ],
+  "🖥 Backend": [
+    { name: "Node.js", icon: SiNodedotjs },
+    { name: "Express.js", icon: SiExpress },
+    { name: "Java", icon: FaJava },
+    { name: "Python", icon: FaPython },
+  ],
+  "🗄 Database": [
+    { name: "MongoDB", icon: SiMongodb },
+    { name: "MySQL", icon: SiMysql },
+    { name: "PostgreSQL", icon: SiPostgresql },
+    { name: "Firebase", icon: SiFirebase },
+  ],
+  "📱 Mobile": [
+    { name: "Flutter", icon: SiFlutter },
+  ],
+  "⚙ DevOps & Tools": [
+    { name: "Docker", icon: SiDocker },
+    { name: "GitHub", icon: SiGithub },
+  ],
+};
+
 
 const infiniteStacks = [...techStacks, ...techStacks];
 
- 
-  /* ---------------- CERTIFICATIONS ---------------- */
+
 const certifications = [
   {
     title: "Authentication and Authorization in Web & API Security",
     org: "Linux Foundation",
     year: "2025",
-    link: "",
-    image: "/certificates/linux-auth.png"
+    icon: Lock,
+    color: "from-blue-500 to-cyan-500"
   },
   {
     title: "Introduction to Cybersecurity",
     org: "Cisco Networking Academy",
     year: "2025",
-    link: "",
-    image: "/images/cs1.jpg"
+    icon: ShieldCheck,
+    color: "from-indigo-500 to-purple-500"
   },
   {
     title: "Blockchain: Understanding Its Uses and Implications",
     org: "Linux Foundation",
     year: "2025",
-    link: ""
+    icon: Cpu,
+    color: "from-emerald-500 to-green-600"
   },
   {
     title: "Complete Guide to Cybersecurity: A Practical Approach",
     org: "LinkedIn Learning",
     year: "2025",
-    link: ""
+    icon: BookOpen,
+    color: "from-orange-500 to-amber-500"
   },
   {
     title: "Programming Foundations: Software Testing / QA",
     org: "LinkedIn Learning",
     year: "2025",
-    link: "https://www.linkedin.com/learning/certificates/0032352972e4be1a12f75d4ce1a013a5208586bd628a69d0bd6f11005ca7253d"
+    icon: Award,
+    color: "from-pink-500 to-rose-500"
   }
 ];
 
@@ -144,25 +192,16 @@ const certifications = [
   </h3>
 
   <div className="relative overflow-hidden mb-16">
-    <div className="flex gap-6 w-max animate-scroll hover:[animation-play-state:paused]">
+    <div className="flex gap-10 w-max animate-scroll hover:[animation-play-state:paused]">
       {infiniteStacks.map((tech, idx) => (
         <div
           key={idx}
-          className="relative group min-w-[130px] h-32 flex flex-col items-center justify-center rounded-xl p-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 animate-borderGlow hover:shadow-[0_0_20px_rgba(236,72,153,0.6)] transition-all duration-500"
+          className="flex flex-col items-center justify-center min-w-[120px] group"
         >
-          <div className="flex flex-col items-center justify-center w-full h-full rounded-xl bg-white/5 dark:bg-black/50 backdrop-blur-lg animate-float">
-
-            <div
-              className={`w-14 h-14 rounded-full bg-gradient-to-r ${tech.color} flex items-center justify-center mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300`}
-            >
-              <tech.icon className="w-7 h-7 text-white" />
-            </div>
-
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-pink-400 transition-colors duration-300">
-              {tech.name}
-            </span>
-
-          </div>
+          <tech.icon className="text-5xl text-gray-600 dark:text-gray-300 group-hover:text-pink-500 transition duration-300" />
+          <span className="text-sm mt-3 text-gray-600 dark:text-gray-400 group-hover:text-pink-400">
+            {tech.name}
+          </span>
         </div>
       ))}
     </div>
@@ -170,40 +209,53 @@ const certifications = [
 </Animate>
 
 
+
       {/* ---------------- CERTIFICATIONS ---------------- */}
-<Animate delay={0.4}>
-  <h3 className="font-semibold mb-4 flex items-center gap-2 dark:text-white">
-    <Award size={18} /> Certifications
-  </h3>
 
-  <div className="grid sm:grid-cols-3 gap-6">
-    {certifications.map((cert, i) => (
+      <Animate delay={0.4}>
+        <h3 className="font-semibold mb-6 dark:text-white">
+           Certifications
+        </h3>
+      </Animate>
+<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  {certifications.map((cert, i) => (
+    <Animate key={i} delay={0.1 * i}>
       <div
-        key={i}
-        className="p-5 rounded-xl border bg-white/50 dark:bg-black/40 backdrop-blur-lg hover:shadow-lg transition duration-300"
+        className="
+        rounded-3xl p-6
+        bg-white/5 dark:bg-white/5
+        backdrop-blur-2xl
+        border border-white/10
+        shadow-[0_8px_32px_rgba(0,0,0,0.25)]
+        hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]
+        hover:-translate-y-2
+        transition-all duration-500
+        "
       >
-        <p className="font-semibold text-sm dark:text-white">
-          {cert.title}
-        </p>
+        {/* Icon Badge */}
+        <div
+          className={`w-14 h-14 rounded-full bg-gradient-to-br ${cert.color}
+                      flex items-center justify-center mb-5
+                      shadow-md`}
+        >
+          <cert.icon className="w-6 h-6 text-white" />
+        </div>
 
-        <p className="text-xs text-gray-500 mt-1">
+        {/* Title */}
+        <h4 className="text-sm font-semibold dark:text-white leading-snug mb-3">
+          {cert.title}
+        </h4>
+
+        {/* Org + Year */}
+        <p className="text-sm text-gray-400">
           {cert.org} • {cert.year}
         </p>
-
-        {cert.link && (
-          <a
-            href={cert.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-blue-500 hover:underline mt-3 inline-block"
-          >
-            View Credential
-          </a>
-        )}
       </div>
-    ))}
-  </div>
-</Animate>
+    </Animate>
+  ))}
+</div>
+
+
     </section>
   );
 }
