@@ -122,7 +122,7 @@ export default function Hero() {
   </a> */}
 
   <a
-    href="https://www.credly.com/users/YOUR_CREDLY"
+    href="https://www.credly.com/users/dinushi-mendis"
     target="_blank"
     rel="noopener noreferrer"
     className="text-gray-300 hover:text-yellow-400 transition transform hover:scale-125 hover:drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]"

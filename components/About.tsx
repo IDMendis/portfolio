@@ -99,6 +99,7 @@ const categorizedStacks = {
     { name: "CSS", icon: SiCss3 },
     { name: "Tailwind CSS", icon: SiTailwindcss },
     { name: "MUI", icon: SiMui },
+    { name: "Typescript", icon: SiTypescript },
   ],
 
   "🖥 Backend Development": [
