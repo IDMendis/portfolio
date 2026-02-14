@@ -45,7 +45,7 @@ const projects = [
       "Engineered a high-performance, non-blocking distributed broadcasting system using Spring Boot and Java NIO. Designed a publish-subscribe architecture supporting TCP, UDP, and WebSocket protocols to enable efficient real-time data distribution. Optimized for low latency and concurrent client handling across multiple communication channels.",
     images: [
       "/projectImages/stockcast.jpg",
-      "/projectImages/stockcast2.jpg",
+      "/projectImages/Stockcast2.jpg",
     ],
     github: "",
   
