@@ -186,6 +186,7 @@ const certifications = [
       </Animate>
 
 {/* ---------------- TECH STACK CAROUSEL ---------------- */}
+{/* ---------------- TECH STACK CAROUSEL ---------------- */}
 <Animate delay={0.3}>
   <h3 className="font-semibold mb-6 dark:text-white">
     ⚙️ Tech Stack
@@ -205,6 +206,25 @@ const certifications = [
         </div>
       ))}
     </div>
+  </div>
+
+  {/* Categorized Stacks */}
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    {Object.entries(categorizedStacks).map(([category, techs]) => (
+      <div key={category} className="p-6 rounded-xl bg-white/50 dark:bg-black/40 backdrop-blur-lg border">
+        <h4 className="font-semibold mb-4 dark:text-white">{category}</h4>
+        <div className="grid grid-cols-3 gap-4">
+          {techs.map((tech) => (
+            <div key={tech.name} className="flex flex-col items-center group">
+              <tech.icon className="text-4xl text-gray-600 dark:text-gray-300 group-hover:text-pink-500 transition duration-300" />
+              <span className="text-xs mt-2 text-center text-gray-600 dark:text-gray-400 group-hover:text-pink-400">
+                {tech.name}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
   </div>
 </Animate>
 
