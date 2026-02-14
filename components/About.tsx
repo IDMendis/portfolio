@@ -14,7 +14,20 @@ import {
   SiDocker,
   SiGithub,
   SiJavascript,
-  SiTypescript
+  SiTypescript,
+  SiC,
+  SiDart,
+  SiFigma,
+  SiCanva,
+  SiGimp,
+  SiGit,
+  SiPostman,
+  SiSpringboot,
+  SiMui,
+  SiHtml5,
+  SiCss3,
+  SiFastapi,
+  SiJsonwebtokens
 } from "react-icons/si";
 
 import { FaJava, FaPython } from "react-icons/fa";
@@ -28,52 +41,97 @@ export default function About() {
   const [index, setIndex] = useState(0);
 
   /* ---------------- TECH STACKS ---------------- */
-/* ---------------- TECH STACK DATA ---------------- */
-
 const techStacks = [
-  { name: "React", icon: SiReact },
+  // Languages
+  { name: "Java", icon: FaJava },
+  { name: "JavaScript", icon: SiJavascript },
+  { name: "C", icon: SiC },
+  { name: "Python", icon: FaPython },
+  { name: "Dart", icon: SiDart },
+
+  // Web & Frameworks
+  { name: "React.js", icon: SiReact },
   { name: "Next.js", icon: SiNextdotjs },
-  { name: "Tailwind CSS", icon: SiTailwindcss },
   { name: "Node.js", icon: SiNodedotjs },
   { name: "Express.js", icon: SiExpress },
-  { name: "MongoDB", icon: SiMongodb },
-  { name: "Firebase", icon: SiFirebase },
-  { name: "Java", icon: FaJava },
-  { name: "Python", icon: FaPython },
+  { name: "Spring Boot", icon: SiSpringboot },
+  { name: "Tailwind CSS", icon: SiTailwindcss },
+  { name: "MUI", icon: SiMui },
+  { name: "HTML", icon: SiHtml5 },
+  { name: "CSS", icon: SiCss3 },
+
+  // Mobile
+  { name: "Flutter", icon: SiFlutter },
+
+  // Databases
   { name: "MySQL", icon: SiMysql },
-  { name: "PostgreSQL", icon: SiPostgresql },
-  { name: "Docker", icon: SiDocker },
+  { name: "Firebase", icon: SiFirebase },
+  { name: "MongoDB", icon: SiMongodb },
+
+  // Tools & Platforms
+  { name: "Git", icon: SiGit },
   { name: "GitHub", icon: SiGithub },
+  { name: "Postman", icon: SiPostman },
+
+  // APIs & Security
+  { name: "REST APIs", icon: SiFastapi },
+  { name: "JWT Authentication", icon: SiJsonwebtokens },
+
+  // Design
+  { name: "Figma", icon: SiFigma },
+  { name: "Canva", icon: SiCanva },
+  { name: "GIMP", icon: SiGimp },
 ];
 
 const categorizedStacks = {
-  "🌐 Web Development": [
-    { name: "React", icon: SiReact },
-    { name: "Next.js", icon: SiNextdotjs },
-    { name: "Tailwind CSS", icon: SiTailwindcss },
+  "💻 Programming Languages": [
+    { name: "Java", icon: FaJava },
     { name: "JavaScript", icon: SiJavascript },
-    { name: "TypeScript", icon: SiTypescript },
+    { name: "Python", icon: FaPython },
+    { name: "C", icon: SiC },
+    { name: "Dart", icon: SiDart },
   ],
-  "🖥 Backend": [
+
+  "🌐 Web Development": [
+    { name: "React.js", icon: SiReact },
+    { name: "Next.js", icon: SiNextdotjs },
+    { name: "HTML", icon: SiHtml5 },
+    { name: "CSS", icon: SiCss3 },
+    { name: "Tailwind CSS", icon: SiTailwindcss },
+    { name: "MUI", icon: SiMui },
+  ],
+
+  "🖥 Backend Development": [
     { name: "Node.js", icon: SiNodedotjs },
     { name: "Express.js", icon: SiExpress },
-    { name: "Java", icon: FaJava },
-    { name: "Python", icon: FaPython },
+    { name: "Spring Boot", icon: SiSpringboot },
+    { name: "REST APIs", icon: SiFastapi },
+    { name: "JWT Authentication", icon: SiJsonwebtokens },
   ],
-  "🗄 Database": [
-    { name: "MongoDB", icon: SiMongodb },
+
+  "🗄 Databases": [
     { name: "MySQL", icon: SiMysql },
-    { name: "PostgreSQL", icon: SiPostgresql },
     { name: "Firebase", icon: SiFirebase },
+    { name: "MongoDB", icon: SiMongodb },
   ],
-  "📱 Mobile": [
+
+  "📱 Mobile Development": [
     { name: "Flutter", icon: SiFlutter },
   ],
-  "⚙ DevOps & Tools": [
-    { name: "Docker", icon: SiDocker },
+
+  "⚙ Tools & Platforms": [
+    { name: "Git", icon: SiGit },
     { name: "GitHub", icon: SiGithub },
+    { name: "Postman", icon: SiPostman },
+  ],
+
+  "🎨 Design Tools": [
+    { name: "Figma", icon: SiFigma },
+    { name: "Canva", icon: SiCanva },
+    { name: "GIMP", icon: SiGimp },
   ],
 };
+
 
 
 const infiniteStacks = [...techStacks, ...techStacks];
@@ -186,33 +244,44 @@ const certifications = [
       </Animate>
 
 {/* ---------------- TECH STACK CAROUSEL ---------------- */}
-{/* ---------------- TECH STACK CAROUSEL ---------------- */}
+{/* ---------------- TECH STACK ---------------- */}
+
+{/* Animate ONLY the heading */}
 <Animate delay={0.3}>
   <h3 className="font-semibold mb-6 dark:text-white">
     ⚙️ Tech Stack
   </h3>
+</Animate>
 
-  <div className="relative overflow-hidden mb-16">
-    <div className="flex gap-10 w-max animate-scroll hover:[animation-play-state:paused]">
-      {infiniteStacks.map((tech, idx) => (
-        <div
-          key={idx}
-          className="flex flex-col items-center justify-center min-w-[120px] group"
-        >
-          <tech.icon className="text-5xl text-gray-600 dark:text-gray-300 group-hover:text-pink-500 transition duration-300" />
-          <span className="text-sm mt-3 text-gray-600 dark:text-gray-400 group-hover:text-pink-400">
-            {tech.name}
-          </span>
-        </div>
-      ))}
-    </div>
+{/* ❌ No Animate wrapper here */}
+<div className="relative overflow-hidden mb-16">
+  <div className="flex gap-10 w-max animate-scroll hover:[animation-play-state:paused]">
+    {infiniteStacks.map((tech, idx) => (
+      <div
+        key={idx}
+        className="flex flex-col items-center justify-center min-w-[120px] group"
+      >
+        <tech.icon className="text-5xl text-gray-600 dark:text-gray-300 group-hover:text-pink-500 transition duration-300" />
+        <span className="text-sm mt-3 text-gray-600 dark:text-gray-400 group-hover:text-pink-400">
+          {tech.name}
+        </span>
+      </div>
+    ))}
   </div>
+</div>
 
-  {/* Categorized Stacks */}
+{/* Animate ONLY categorized grid */}
+<Animate delay={0.4}>
   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
     {Object.entries(categorizedStacks).map(([category, techs]) => (
-      <div key={category} className="p-6 rounded-xl bg-white/50 dark:bg-black/40 backdrop-blur-lg border">
-        <h4 className="font-semibold mb-4 dark:text-white">{category}</h4>
+      <div
+        key={category}
+        className="p-6 rounded-xl bg-white/50 dark:bg-black/40 backdrop-blur-lg border"
+      >
+        <h4 className="font-semibold mb-4 dark:text-white">
+          {category}
+        </h4>
+
         <div className="grid grid-cols-3 gap-4">
           {techs.map((tech) => (
             <div key={tech.name} className="flex flex-col items-center group">
@@ -227,6 +296,7 @@ const certifications = [
     ))}
   </div>
 </Animate>
+
 
 
 
