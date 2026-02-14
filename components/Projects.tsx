@@ -15,10 +15,10 @@ const projects = [
     description:
       "Developed a full-stack garage management system with role-based access for customers, technicians, and managers. Implemented secure JWT authentication and built modular service and feedback management features. Collaborated in an agile team environment to deliver a scalable and user-focused solution for real-world operational workflows.",
     images: [
-      "/projectImages/garage1.jpg",
-      "/projectImages/garage2.jpg",
-      "/projectImages/garage3.jpg",
-      "/projectImages/garage4.jpg",
+      "/images/garage1.jpg",
+      "/images/garage2.jpg",
+      "/images/garage3.jpg",
+      "/images/garage4.jpg",
     ],
     github: "https://github.com/Bytebuilder2-0",
     live: "",
@@ -30,9 +30,9 @@ const projects = [
     description:
       "Designed and developed a personal portfolio website using Next.js and Tailwind CSS, showcasing projects, skills, and experience. Integrated Google Sheets API for dynamic content management and implemented responsive design principles to ensure optimal viewing across devices.",
     images: [
-      "/projectImages/port1.png",
-      "/projectImages/port2.png",
-      "/projectImages/port3.png",
+      "/images/port1.png",
+      "/images/port2.png",
+      "/images/port3.png",
     ],
     github: "#",
     live: "",
@@ -44,8 +44,8 @@ const projects = [
     description:
       "Engineered a high-performance, non-blocking distributed broadcasting system using Spring Boot and Java NIO. Designed a publish-subscribe architecture supporting TCP, UDP, and WebSocket protocols to enable efficient real-time data distribution. Optimized for low latency and concurrent client handling across multiple communication channels.",
     images: [
-      "/projectImages/stockcast.jpg",
-      "/projectImages/Stockcast2.jpg",
+      "/images/stockcast.jpg",
+      "/images/Stockcast2.jpg",
     ],
     github: "",
   
@@ -57,8 +57,8 @@ const projects = [
     description:
       "Contributed to the development of a decentralized esports tournament platform integrating blockchain for transparency and smart contract-based prize distribution. Built frontend interfaces with Next.js and backend APIs using FastAPI, while leveraging Solidity and Polygon for secure on-chain logic.",
     images: [
-      "/projectImages/aegis1.png",
-      "/projectImages/aegis2.png",
+      "/images/aegis1.png",
+      "/images/aegis2.png",
     ],
     github: "https://github.com/IDMendis/Aegis",
     live: "",
@@ -70,8 +70,8 @@ const projects = [
     description:
       "Built a cross-platform mobile application using Flutter that fetches and displays real-time weather data via the OpenWeatherMap API. Focused on clean UI design, responsive layouts, and efficient API integration to deliver accurate and user-friendly weather insights.",
     images: [
-      "/projectImages/weatherApp.jpg",
-      "/projectImages/weatherApp2.jpg",
+      "/images/weatherApp.jpg",
+      "/images/weatherApp2.jpg",
     ],
     github: "https://github.com/IDMendis/Flutter-Weather-Forecast-UI",
     live: "",
@@ -82,7 +82,7 @@ const projects = [
   tech: ["Arduino", "C++", "ESP32", "RFID", "LED Neon Lights", "Firebase"],
   description:
     "Designed and developed an interactive microcontroller-based game system inspired by the classic SOS gameplay concept. Implemented embedded logic and hardware integration to create a responsive and engaging physical gaming experience.",
-  images: ["/projectImages/tictac.jpg", "/projectImages/tictac2.jpg"],
+  images: ["/images/tictac.jpg", "/images/tictac2.jpg"],
   github: "",
   live: "https://www.youtube.com/watch?v=HzNSNgRtWnQ",
 },
