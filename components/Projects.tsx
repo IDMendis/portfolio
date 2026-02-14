@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -135,11 +134,10 @@ function ProjectSlider({ images }: { images: string[] }) {
           transition={{ duration: 0.6 }}
           className="absolute inset-0"
         >
-          <Image
+          <img
             src={images[index]}
             alt="Project image"
-            fill
-            className="object-cover"
+            className="w-full h-full object-cover"
           />
         </motion.div>
       </AnimatePresence>

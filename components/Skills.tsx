@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const skills = ["react", "node", "python", "flutter"];
 
 export default function Skills() {
@@ -11,7 +9,7 @@ export default function Skills() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
           {skills.map(skill => (
             <div key={skill} className="text-center">
-              <Image src={`/skills/${skill}.png`} alt={skill} width={60} height={60} />
+              <img src={`/skills/${skill}.png`} alt={skill} className="w-[60px] h-[60px] mx-auto" />
               <p className="mt-2 capitalize">{skill}</p>
             </div>
           ))}
