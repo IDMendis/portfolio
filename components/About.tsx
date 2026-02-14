@@ -218,37 +218,66 @@ const certifications = [
         </div>
       </Animate>
 
-      {/* ---------------- EDUCATION ---------------- */}
-      <Animate delay={0.2}>
-         <h3 className="font-semibold mb-6 dark:text-white">
-    Education
-  </h3>
-        <div className="grid sm:grid-cols-2 gap-6 mb-16">
-          <div className="p-6 rounded-xl bg-white/50 dark:bg-black/40 backdrop-blur-lg border">
-            <h3 className="font-semibold mb-2 flex items-center gap-2 dark:text-white">
-              🎓 Higher Education
-            </h3>
-              <h4 className="font-semibold mb-2 flex items-center gap-2 dark:text-white">
-                University of Moratuwa
-            </h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              BSc (Hons) in Information Technology<br />
-              GPA: 3.49 (2023 – 2027)
-            </p>
-          </div> 
+      <div className="grid sm:grid-cols-2 gap-8 mb-16">
 
-          <div className="p-6 rounded-xl bg-white/50 dark:bg-black/40 backdrop-blur-lg border">
-            <h3 className="font-semibold mb-2 dark:text-white">🧪 Secondary Education</h3>
-            <h4 className="font-semibold mb-2 flex items-center gap-2 dark:text-white">
-                  Govt/ Science Cillege- Matale
-            </h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Biological Science<br />
-              Biology (B), Physics (B), Chemistry (A)
-            </p>
-          </div>
-        </div>
-      </Animate>
+  {/* ---------------- University Card ---------------- */}
+<div className="relative group p-6 rounded-2xl 
+                bg-white/50 dark:bg-black/40 
+                backdrop-blur-lg border border-white/10
+                transition-all duration-500
+                hover:scale-105 hover:-translate-y-2
+                hover:shadow-[0_0_25px_rgba(168,85,247,0.6)]">
+
+  <h3 className="font-semibold mb-2 flex items-center gap-2 dark:text-white">
+    🎓 Higher Education
+  </h3>
+
+  <div className="flex items-center justify-between mb-2">
+    <h4 className="font-semibold dark:text-white">
+      University of Moratuwa
+    </h4>
+
+    {/* Current Indicator */}
+    <div className="flex items-center gap-2">
+      <div className="w-2 h-2 bg-pink-500 rounded-full animate-pulse"></div>
+      <span className="text-xs text-pink-400 font-medium">
+        Current
+      </span>
+    </div>
+  </div>
+
+  <p className="text-sm text-gray-600 dark:text-gray-400">
+    BSc (Hons) in Information Technology <br />
+    GPA: 3.49 (2023 – 2027)
+  </p>
+</div>
+
+
+
+  {/* ---------------- School Card ---------------- */}
+  <div className="group p-6 rounded-2xl 
+                  bg-white/50 dark:bg-black/40 
+                  backdrop-blur-lg border border-white/10
+                  transition-all duration-500
+                  hover:scale-105 hover:-translate-y-2
+                  hover:shadow-[0_0_25px_rgba(59,130,246,0.6)]">
+
+    <h3 className="font-semibold mb-2 dark:text-white">
+      🧪 Secondary Education
+    </h3>
+
+    <h4 className="font-semibold mb-2 dark:text-white">
+      Govt/ Science College - Matale
+    </h4>
+
+    <p className="text-sm text-gray-600 dark:text-gray-400">
+      Biological Science <br />
+      Biology (B), Physics (B), Chemistry (A)
+    </p>
+  </div>
+
+</div>
+
 
 {/* ---------------- TECH STACK CAROUSEL ---------------- */}
 {/* ---------------- TECH STACK ---------------- */}
