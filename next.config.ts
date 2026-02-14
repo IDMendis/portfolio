@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  output: "export",         // important for static export
   images: {
-    unoptimized: true,
+    unoptimized: true,      // allows <Image /> to work without server optimization
   },
 };
 
