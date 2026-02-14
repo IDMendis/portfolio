@@ -191,32 +191,34 @@ const certifications = [
       </Animate>
 
       {/* ---------------- INTRO + IMAGE ---------------- */}
-      <Animate delay={0.1}>
-        <div className="grid md:grid-cols-3 gap-10 mb-16 items-center">
-          {/* Image */}
-          <div className="flex justify-center">
-            <div className="w-56 h-56 rounded-2xl overflow-hidden border bg-white/40 dark:bg-black/40 backdrop-blur-lg">
-              <img
-                src="/images/me1.jpeg"
-                alt="Dinushi"
-                className="w-full h-full object-cover"
-              />
+      <div className="p-8 rounded-3xl bg-white/10 dark:bg-black/30 backdrop-blur-2xl border border-white/20 shadow-xl mb-16">
+        <Animate delay={0.1}>
+          <div className="grid md:grid-cols-3 gap-10 items-center">
+            {/* Image */}
+            <div className="flex justify-center">
+              <div className="w-56 h-56 rounded-2xl overflow-hidden border bg-white/40 dark:bg-black/40 backdrop-blur-lg">
+                <img
+                  src="/images/me1.jpeg"
+                  alt="Dinushi"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Text */}
+            <div className="md:col-span-2">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Software Engineering undergraduate pursuing a BSc (Hons) in
+                Information Technology at the University of Moratuwa. Experienced
+                in full-stack web and mobile development with a strong focus on
+                secure backend systems, authentication, and clean UI/UX design.
+                Passionate about building real-world solutions and continuously
+                improving my technical skill set.
+              </p>
             </div>
           </div>
-
-          {/* Text */}
-          <div className="md:col-span-2">
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              Software Engineering undergraduate pursuing a BSc (Hons) in
-              Information Technology at the University of Moratuwa. Experienced
-              in full-stack web and mobile development with a strong focus on
-              secure backend systems, authentication, and clean UI/UX design.
-              Passionate about building real-world solutions and continuously
-              improving my technical skill set.
-            </p>
-          </div>
-        </div>
-      </Animate>
+        </Animate>
+      </div>
 
       <div className="grid sm:grid-cols-2 gap-8 mb-16">
 

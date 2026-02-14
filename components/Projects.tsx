@@ -8,20 +8,7 @@ import { useEffect, useState } from "react";
 /* ------------------ PROJECT DATA ------------------ */
 
 const projects = [
-  {
-    title: "Carely – Healthcare Appointment System",
-    period: "2025 – Present (Individual Project)",
-    tech: ["MERN", "FastAPI", "Machine Learning", "MongoDB"],
-    description:
-      "Semi-intelligent healthcare platform with ML-powered specialist recommendations and secure real-time appointment booking.",
-    images: [
-      "/projects/carely-1.png",
-      "/projects/carely-2.png",
-      "/projects/carely-3.png",
-    ],
-    github: "#",
-    live: "",
-  },
+  
   {
     title: "Comprehensive Garage Management System",
     period: "2025 (Group Project – TayCanTech Pvt Ltd)",
@@ -35,6 +22,20 @@ const projects = [
       "/projectImages/garage4.jpg",
     ],
     github: "https://github.com/Bytebuilder2-0",
+    live: "",
+  },
+  {
+    title: " My Portfolio Website",
+    period: "2026 (Personal Project)",
+    tech: ["Next.js", "Typescript", "Tailwind CSS", "Googlesheet API"],
+    description:
+      "Designed and developed a personal portfolio website using Next.js and Tailwind CSS, showcasing projects, skills, and experience. Integrated Google Sheets API for dynamic content management and implemented responsive design principles to ensure optimal viewing across devices.",
+    images: [
+      "/projectImages/port1.png",
+      "/projectImages/port2.png",
+      "/projectImages/port3.png",
+    ],
+    github: "#",
     live: "",
   },
   {
@@ -86,6 +87,20 @@ const projects = [
   github: "",
   live: "https://www.youtube.com/watch?v=HzNSNgRtWnQ",
 },
+{
+    title: "Carely – Healthcare Appointment System",
+    period: "2025 – Present (Individual Project)",
+    tech: ["MERN", "FastAPI", "Machine Learning", "MongoDB"],
+    description:
+      "Semi-intelligent healthcare platform with ML-powered specialist recommendations and secure real-time appointment booking.",
+    images: [
+      "/projects/carely-1.png",
+      "/projects/carely-2.png",
+      "/projects/carely-3.png",
+    ],
+    github: "#",
+    live: "",
+  },
 
 ];
 
