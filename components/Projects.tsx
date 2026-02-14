@@ -20,7 +20,7 @@ const projects = [
       "/projects/carely-3.png",
     ],
     github: "#",
-    live: "#",
+    live: "",
   },
   {
     title: "Comprehensive Garage Management System",
@@ -34,8 +34,8 @@ const projects = [
       "/projectImages/garage3.jpg",
       "/projectImages/garage4.jpg",
     ],
-    github: "#",
-    live: "#",
+    github: "https://github.com/Bytebuilder2-0",
+    live: "",
   },
   {
     title: "StockCast – Distributed Real-Time Broadcasting System",
@@ -47,7 +47,7 @@ const projects = [
       "/projectImages/stockcast.jpg",
       "/projectImages/stockcast2.jpg",
     ],
-    github: "#",
+    github: "",
   
   },
   {
@@ -60,8 +60,8 @@ const projects = [
       "/projectImages/aegis1.png",
       "/projectImages/aegis2.png",
     ],
-    github: "#",
-    live: "#",
+    github: "https://github.com/IDMendis/Aegis",
+    live: "",
   },
   {
     title: "Weather App with Real-Time Data and Forecasting",
@@ -73,21 +73,20 @@ const projects = [
       "/projectImages/weatherApp.jpg",
       "/projectImages/weatherApp2.jpg",
     ],
-    github: "#",
-    live: "#",
+    github: "https://github.com/IDMendis/Flutter-Weather-Forecast-UI",
+    live: "",
   },
   {
-    title: "Tic-Tac-Toe Gamebox",
-    period: "2024 | Microcontroller-Based Hardware Project",
-    tech: ["Arduino", "C++", "ESP432", "RFID", "LED Neon Lights"],
-    description:
-      "Designed and developed an interactive microcontroller-based game system inspired by the classic SOS gameplay concept. Implemented embedded logic and hardware integration to create a responsive and engaging physical gaming experience.",
-    images: [
-      "/projectImages/tictac.jpg",
-    ],
-    github: "#",
-    live: "#",
-  },
+  title: "Tic-Tac-Toe Gamebox",
+  period: "2024 | Microcontroller-Based Hardware Project",
+  tech: ["Arduino", "C++", "ESP32", "RFID", "LED Neon Lights", "Firebase"],
+  description:
+    "Designed and developed an interactive microcontroller-based game system inspired by the classic SOS gameplay concept. Implemented embedded logic and hardware integration to create a responsive and engaging physical gaming experience.",
+  images: ["/projectImages/tictac.jpg"],
+  github: "",
+  live: "https://www.youtube.com/watch?v=HzNSNgRtWnQ",
+},
+
 ];
 
 /* ------------------ IMAGE SLIDER ------------------ */
@@ -230,30 +229,42 @@ export default function Projects() {
               </p>
 
               {/* Buttons */}
-              <div className="flex gap-4 mt-6">
-                <a
-                  href={project.github}
-                  className="flex items-center gap-2 px-4 py-2 text-sm rounded-xl
-                    bg-gray-900 text-white
-                    dark:bg-white dark:text-black
-                    hover:scale-105 transition"
-                >
-                  <Github size={16} />
-                  View Code
-                </a>
+<div className="flex gap-4 mt-6">
 
-                {/* <a
-                  href={project.live}
-                  className="flex items-center gap-2 px-4 py-2 text-sm rounded-xl
-                    border border-gray-300 dark:border-white/20
-                    text-gray-900 dark:text-white
-                    hover:bg-gray-100 dark:hover:bg-white/10
-                    transition"
-                >
-                  <ExternalLink size={16} />
-                  Live Demo
-                </a> */}
-              </div>
+  {/* Show GitHub ONLY if github exists */}
+  {project.github && (
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 px-4 py-2 text-sm rounded-xl
+        bg-gray-900 text-white
+        dark:bg-white dark:text-black
+        hover:scale-105 transition"
+    >
+      <Github size={16} />
+      View Code
+    </a>
+  )}
+
+  {/* Show Live Demo ONLY if live exists */}
+  {project.live && (
+    <a
+      href={project.live}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 px-4 py-2 text-sm rounded-xl
+        border border-gray-300 dark:border-white/20
+        text-gray-900 dark:text-white
+        hover:bg-gray-100 dark:hover:bg-white/10
+        transition"
+    >
+      <ExternalLink size={16} />
+      Live Demo
+    </a>
+  )}
+
+</div>
 
             </div>
           </motion.div>
