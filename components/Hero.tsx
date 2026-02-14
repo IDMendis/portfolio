@@ -76,7 +76,7 @@ export default function Hero() {
             Get Connected
           </a>
           <a
-            href="/Dinushi-Mendis-Resume.pdf"
+            href="/skills/Dinushi_Mendis_Resume.pdf"
             className="px-8 py-4 rounded-full border border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white transition"
           >
             Download Resume
