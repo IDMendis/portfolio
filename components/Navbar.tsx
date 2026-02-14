@@ -19,7 +19,7 @@ export default function Navbar() {
 
         <div className="flex gap-6 items-center text-sm font-medium">
           <a href="#about" className="text-neutral-800 dark:text-neutral-200  hover:text-blue-500">About</a>
-          <a href="#skills" className="text-neutral-800 dark:text-neutral-200  hover:text-blue-500">Skills</a>
+          {/* <a href="#skills" className="text-neutral-800 dark:text-neutral-200  hover:text-blue-500">Skills</a> */}
           <a href="#projects" className="text-neutral-800 dark:text-neutral-200  hover:text-blue-500">Projects</a>
           <a href="#contact" className="text-neutral-800 dark:text-neutral-200  hover:text-blue-500">Contact</a>
           <ThemeToggle />
