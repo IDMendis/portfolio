@@ -181,8 +181,12 @@ const certifications = [
     <section id="about" className="max-w-6xl mx-auto px-6 py-24">
       {/* ---------------- HEADER ---------------- */}
       <Animate>
-        <h2 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">About Me</h2>
-        <div className="w-16 h-1 bg-gradient-to-r from-pink-500 to-purple-600 mb-8" />
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-20 tracking-tight 
+          bg-gradient-to-r from-purple-500 to-blue-500 
+          bg-clip-text text-transparent ">
+          About Me
+        </h2>
+        {/* <div className="w-16 h-1 bg-gradient-to-r from-pink-500 to-purple-600 mb-8" /> */}
         
       </Animate>
 
@@ -216,6 +220,9 @@ const certifications = [
 
       {/* ---------------- EDUCATION ---------------- */}
       <Animate delay={0.2}>
+         <h3 className="font-semibold mb-6 dark:text-white">
+    Education
+  </h3>
         <div className="grid sm:grid-cols-2 gap-6 mb-16">
           <div className="p-6 rounded-xl bg-white/50 dark:bg-black/40 backdrop-blur-lg border">
             <h3 className="font-semibold mb-2 flex items-center gap-2 dark:text-white">
@@ -248,9 +255,12 @@ const certifications = [
 
 {/* Animate ONLY the heading */}
 <Animate delay={0.3}>
-  <h3 className="font-semibold mb-6 dark:text-white">
-    ⚙️ Tech Stack
-  </h3>
+   <h3 className="text-2xl font-bold pt-10 mb-6 
+               bg-gradient-to-r from-purple-500 to-blue-500 
+               bg-clip-text text-transparent">
+  ⚙️ Skills and Technology
+</h3>
+  
 </Animate>
 
 {/* ❌ No Animate wrapper here */}
@@ -303,9 +313,12 @@ const certifications = [
       {/* ---------------- CERTIFICATIONS ---------------- */}
 
       <Animate delay={0.4}>
-        <h3 className="font-semibold mb-6 dark:text-white">
-           Certifications
-        </h3>
+        <h3 className="text-2xl font-bold pt-10 mb-6 
+               bg-gradient-to-r from-purple-500 to-blue-500 
+               bg-clip-text text-transparent">
+  Certifications
+</h3>
+
       </Animate>
 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
   {certifications.map((cert, i) => (
